@@ -20,8 +20,8 @@ st.markdown(multi)
 sentiment_mapping = ["one", "two", "three", "four", "five"]
 selected = st.feedback("stars")
 if selected is not None:
-    st.markdown(f"You selected {sentiment_mapping[selected]} star(s).")
+    st.markdown(f"Terimakasih atas {sentiment_mapping[selected]} bintang(s).")
 sentiment_mapping = [":material/thumb_down:", ":material/thumb_up:"]
 selected = st.feedback("thumbs")
 if selected is not None:
-    st.markdown(f"You selected: {sentiment_mapping[selected]}")
+    st.markdown(f"Memberi: {sentiment_mapping[selected]}")
