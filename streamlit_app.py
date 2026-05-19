@@ -24,4 +24,4 @@ if selected is not None:
 sentiment_mapping = [":material/thumb_down:", ":material/thumb_up:"]
 selected = st.feedback("thumbs")
 if selected is not None:
-    st.markdown(f"Memberi: Like{sentiment_mapping[selected]}")
+    st.markdown(f"Memberi: {sentiment_mapping[selected]}")
