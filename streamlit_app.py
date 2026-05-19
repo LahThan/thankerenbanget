@@ -4,10 +4,10 @@ st.title("#THANKERENBANGET")
 st.write(
     "Mari bermain dengan gw [docs.streamlit.io](https://docs.streamlit.io)"
 )
-st.markdown("*Streamlit* is **really** ***cool***.")
+st.markdown("*Fathan* is **really** ***cool***.")
 st.markdown('''
-    :red[Streamlit] :orange[can] :green[write] :blue[text] :violet[in]
-    :gray[pretty] :rainbow[colors] and :blue-background[highlight] text.''')
+    :red[Fathan] :orange[keren] :green[banget] :blue[anjay] :violet[mabar]
+    :gray[profesional] :rainbow[mantap].''')
 st.markdown("Here's a bouquet &mdash;\
             :tulip::cherry_blossom::rose::hibiscus::sunflower::blossom:")
 
