@@ -28,4 +28,4 @@ if selected is not None:
 
 st.title("Pemutar Musik YouTube")
 url_youtube = "https://youtu.be/N7LpNIDCyCA?si=XZwwPf8x2BQrSIMK"
-st.video(url_youtube)
+st.audio(url_youtube)
