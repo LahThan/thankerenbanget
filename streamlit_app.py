@@ -28,24 +28,37 @@ if selected is not None:
     st.markdown(f"Memberi: {sentiment_mapping[selected]}")
 
 
+
 st.title("Web Keren Saya 🚀")
 
-with st.sidebar:
-    st.write("🎵 **Musik Latar Belakang**")
 
-    st.audio("backsound.mp3", format="audio/mp3", autoplay=True, loop=True)
+def load_audio_base64(file_path):
+    with open(file_path, "rb") as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
 
-    st.caption(
-        "Tip: Jika suara belum muncul, tekan tombol 'Play' di atas akibat aturan browser."
+
+try:
+    audio_base64 = load_audio_base64("backsound.mp3")
+
+    st.components.v1.html(
+        f"""
+        <div style="background: #f1f3f4; padding: 10px; border-radius: 30px; display: inline-block;">
+            <span style="font-family: sans-serif; font-size: 14px; margin-right: 10px; vertical-align: middle;">🎵 Backsound:</span>
+            <audio controls autoplay loop style="vertical-align: middle; height: 32px;">
+                <source src="data:audio/mpeg;base64,{audio_base64}" type="audio/mpeg">
+                Browser kamu tidak mendukung pemutar audio ini.
+            </audio>
+        </div>
+        """,
+        height=70,
     )
 
+except FileNotFoundError:
+    st.error(
+        "❌ File 'backsound.mp3' tidak ditemukan! Pastikan file lagunya ada di folder yang sama dengan app.py kamu."
+    )
 
 st.write("---")
-st.subheader("Isi Halaman Web")
-st.write(
-    "Sekarang halaman web kamu memiliki panel pemutar musik mini yang manis di sebelah kiri (Sidebar)!"
-)
-
-
-st.title("Web Keren Saya 🚀")
-st.write("Dengarkan lagu backsound-nya yang sedang berjalan di latar belakang!")
+st.subheader("Dashboard Utama")
+st.write("Silakan berinteraksi dengan website ini.")
