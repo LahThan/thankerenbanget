@@ -26,6 +26,6 @@ selected = st.feedback("thumbs")
 if selected is not None:
     st.markdown(f"Memberi: {sentiment_mapping[selected]}")
 
-st.title("Pemutar Musik YouTube")
-url_youtube = "https://youtu.be/N7LpNIDCyCA?si=XZwwPf8x2BQrSIMK"
-st.audio(url_youtube)
+from streamlit_player import st_player
+st.title("Pemutar Lagu Terintegrasi")
+st_player("https://youtu.be/N7LpNIDCyCA?si=XZwwPf8x2BQrSIMK")
