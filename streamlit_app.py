@@ -26,6 +26,21 @@ selected = st.feedback("thumbs")
 if selected is not None:
     st.markdown(f"Memberi: {sentiment_mapping[selected]}")
 
-from streamlit_player import st_player
-st.title("Pemutar Lagu Terintegrasi")
-st_player("https://youtu.be/N7LpNIDCyCA?si=XZwwPf8x2BQrSIMK")
+def putar_backsound(file_path):
+    with open(file_path, "rb") as f:
+        data = f.read()
+
+    b64 = base64.b64encode(data).decode()
+
+    html_audio = f"""
+    <audio autoplay loop style="display:none;">
+        <source src="data:audio/mp3;base64,{b64}" type="audio/mp3">
+    </audio>
+    """
+
+    st.markdown(html_audio, unsafe_allow_html=True)
+
+
+putar_backsound("backsound.mp3")
+st.title("Web Keren Saya 🚀")
+st.write("Dengarkan lagu backsound-nya yang sedang berjalan di latar belakang!")
