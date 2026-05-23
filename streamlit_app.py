@@ -27,21 +27,25 @@ selected = st.feedback("thumbs")
 if selected is not None:
     st.markdown(f"Memberi: {sentiment_mapping[selected]}")
 
-st.markdown(
-    """
-    <style>
-    .hidden-audio {
-        display: none;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True,
+
+st.title("Web Keren Saya 🚀")
+
+with st.sidebar:
+    st.write("🎵 **Musik Latar Belakang**")
+
+    st.audio("backsound.mp3", format="audio/mp3", autoplay=True, loop=True)
+
+    st.caption(
+        "Tip: Jika suara belum muncul, tekan tombol 'Play' di atas akibat aturan browser."
+    )
+
+
+st.write("---")
+st.subheader("Isi Halaman Web")
+st.write(
+    "Sekarang halaman web kamu memiliki panel pemutar musik mini yang manis di sebelah kiri (Sidebar)!"
 )
 
-with st.container():
-    st.markdown('<div class="hidden-audio">', unsafe_allow_html=True)
-    st.audio("backsound.mp3", format="audio/mp3", autoplay=True, loop=True)
-    st.markdown("</div>", unsafe_allow_html=True)
 
 st.title("Web Keren Saya 🚀")
 st.write("Dengarkan lagu backsound-nya yang sedang berjalan di latar belakang!")
