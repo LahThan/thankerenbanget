@@ -27,4 +27,4 @@ if selected is not None:
     st.markdown(f"Memberi: {sentiment_mapping[selected]}")
 st.subheader("Putar Lagu dari URL")
 url_lagu = "https://youtu.be/N7LpNIDCyCA?si=WiRrZswNVgdCMPFa"
-st.audio(https://youtu.be/N7LpNIDCyCA?si=WiRrZswNVgdCMPFa, format="audio/mp3")
+st.audio("https://youtu.be/N7LpNIDCyCA?si=WiRrZswNVgdCMPFa", format="audio/mp3")
