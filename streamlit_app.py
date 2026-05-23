@@ -1,3 +1,4 @@
+import base64
 import streamlit as st
 
 st.title("#THANKERENBANGET")
