@@ -27,21 +27,21 @@ selected = st.feedback("thumbs")
 if selected is not None:
     st.markdown(f"Memberi: {sentiment_mapping[selected]}")
 
-def putar_backsound(file_path):
-    with open(file_path, "rb") as f:
-        data = f.read()
-
-    b64 = base64.b64encode(data).decode()
-
-    html_audio = f"""
-    <audio autoplay loop style="display:none;">
-        <source src="data:audio/mp3;base64,{b64}" type="audio/mp3">
-    </audio>
+st.markdown(
     """
+    <style>
+    .hidden-audio {
+        display: none;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
 
-    st.markdown(html_audio, unsafe_allow_html=True)
+with st.container():
+    st.markdown('<div class="hidden-audio">', unsafe_allow_html=True)
+    st.audio("backsound.mp3", format="audio/mp3", autoplay=True, loop=True)
+    st.markdown("</div>", unsafe_allow_html=True)
 
-
-putar_backsound("backsound.mp3")
 st.title("Web Keren Saya 🚀")
 st.write("Dengarkan lagu backsound-nya yang sedang berjalan di latar belakang!")
