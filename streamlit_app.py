@@ -26,5 +26,5 @@ selected = st.feedback("thumbs")
 if selected is not None:
     st.markdown(f"Memberi: {sentiment_mapping[selected]}")
 st.subheader("Putar Lagu dari URL")
-url_lagu = "https://youtu.be/N7LpNIDCyCA?si=WiRrZswNVgdCMPFa"
+url_lagu = "https://soundhelix.com"
 st.audio("https://youtu.be/N7LpNIDCyCA?si=WiRrZswNVgdCMPFa", format="audio/mp3")
